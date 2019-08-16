@@ -49,10 +49,10 @@ total_vocab | Total legislative dataset vocabulary
 
 The LSTM models are quite large (each in excess of 100MB) and instead of hosting them on GitHub, they are hosted in a publically accessible Google Storage Bucket:
 
-- LSTM_base
-- LSTM_leg_only
-- LSTM_transfer
-- LSTM_ULMFiT
+- LSTM_base (<https://console.cloud.google.com/storage/browser/rob-bert-legal-compression-public/public/LSTM_base>)
+- LSTM_leg_only (<https://console.cloud.google.com/storage/browser/rob-bert-legal-compression-public/public/LSTM_leg_only>)
+- LSTM_transfer (<https://console.cloud.google.com/storage/browser/rob-bert-legal-compression-public/public/LSTM_transfer>)
+- LSTM_ULMFiT (<https://console.cloud.google.com/storage/browser/rob-bert-legal-compression-public/public/LSTM_ulmfit>)
 
 **File** | **Description**
 ---|---
