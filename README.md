@@ -18,6 +18,7 @@ leg_targetted_val_data.pickle | 'Targetted' sub-set of validation data
 leg_test_data.pickle | Test data
 leg_train_data.pickle | Training data
 leg_val_data.pickle | Validation data
+legislative_compressions_tsv | Raw corpus
 
 #### data/BERT_parsed_data
 
