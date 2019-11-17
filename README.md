@@ -25,11 +25,11 @@ Rather than attempting to cater to all of these audiences at the same time (thro
 
 I explore simplification through compression. The aim of a compression system is, given an input text, to return a simplified version of that text. The compression is achieved by removing words from the original. For example, consider the extract from the Mental Capacity Act 2005 below.
 
-![Extract from the Mental Capacity Act](./images/MCA_extract.png)
+![Extract from the Mental Capacity Act](./images/MCA_extract.PNG)
 
 This provision, a single sentence comprising 50 words written in the passive voice, is not very 'readable'. But breaking down the sentence, I suggest a decent summary of the provision is provided by the words highlighted yellow:
 
-![Extract from the Mental Capacity Act](./images/MCA_extract_hs.png)
+![Extract from the Mental Capacity Act](./images/MCA_extract_hs.PNG)
 
 If the core meaning of the provision is captured by these words you might ask why we need the rest of the words. The answer comes back to the tension mentioned above: in some circumstances, and for some audiences, these extra words are crucial. They add precision, but at the expense of readability.
 
@@ -160,7 +160,7 @@ See page 37 of my thesis for more details.
 
 The performance of the different models have to be seen through the lens of their relative *compression ratios*: the average degree of compression applied by the model. Different compression ratios are illustrated below.
 
-![Compression ratio](./images/compression_ratio.png)
+![Compression ratio](./images/compression_ratio.PNG)
 
 It only makes sense to compare models which generate similar compression ratios (though, of course, we can also comment on the appropriateness of generated compression ratio - did the model tend to delete too much or not enough?).
 
