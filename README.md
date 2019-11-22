@@ -97,7 +97,7 @@ Interestingly, making these sorts of deletions can also help language parsers co
 
 ### Context assumptions
 
-Another feature of legislative language is that fact or circumstances which, in non-legal language, would usually be assumed are, in legal rules, made explicit. For example, from the Children's Act 1989:
+Another feature of legislative language is that facts or circumstances which, in non-legal language, would usually be assumed are, in legal rules, made explicit. For example, from the Children's Act 1989:
 
 > Where a child's father and mother were married to each other at the time of his birth, they shall each have parental responsibility for the child.
 
@@ -185,7 +185,7 @@ A number of examples from the different models are set out in my viva slides (sl
 
  - **Effectiveness of implicit transfer learning**: There was little difference between the LSTM and BERT "base" models (the models that were trained on the news headline corpus only). That was surprising as I expected the BERT model (with all its millions of parameters) to perform better. However, comparing the LSTM and BERT models that were trained *only* on the legislative corpus, the LSTM model collapsed whilst the BERT model was still able to perform. So the depth of the BERT language model does have an edge over the word2vec embeddings, but the advantage largely disappears by the time the pre-training task is introduced.
  
- - **Effectiveness of explicit transfer learning**: As identified above, pre-training on the news headline corpus was essential for the LSTM models (without it, the models collapsed). However, it wasn't that effective overall: (i) there was little difference between the LSTM model using ordinary fine-tuning and the LSTM model using the ULMFiT procedure; and (ii) the model with the compression ratio closest to the target (the BERT and rules-based ensemble model trained only of the legislative corpus) didn't use the pre-training task at all. Taken together, this suggests there is too great a difference between the source domain (news articles) and task (compression of sentences) and the target domain (legislation) and target task (compression of sentences and fragments).
+ - **Effectiveness of explicit transfer learning**: As identified above, pre-training on the news headline corpus was essential for the LSTM models (without it, the models collapsed). However, it wasn't that effective overall: (i) there was little difference between the LSTM model using ordinary fine-tuning and the LSTM model using the ULMFiT procedure; and (ii) the model with the compression ratio closest to the target (the BERT and rules-based ensemble model trained only on the legislative corpus) didn't use the pre-training task at all. Taken together, this suggests there is too great a difference between the source domain (news articles) and task (compression of sentences) and the target domain (legislation) and target task (compression of sentences and fragments).
 
 There're a few ways the work could be developed:
 
