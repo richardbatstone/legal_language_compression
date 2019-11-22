@@ -2,6 +2,17 @@
 
 This repository contains the code, data and write-ups connected with my master's project: Sentence Compression for Improved Understanding of Legal Text. In addition to my thesis and viva slides, I have tried to highlight (and summarise) below the aspects of the project which might be most useful to others interested in legal language compression. 
 
+Navigation:
+
+ - [Motivation](https://github.com/richardbatstone/legal_language_compression#Motivation)
+ - [Approach](https://github.com/richardbatstone/legal_language_compression#Approach)
+ - [Data](https://github.com/richardbatstone/legal_language_compression#Data)
+ - [Simplification themes](https://github.com/richardbatstone/legal_language_compression#Simplification-themes)
+ - [Transfer learning](https://github.com/richardbatstone/legal_language_compression#Transfer-learning)
+ - [Rules-based model](https://github.com/richardbatstone/legal_language_compression#Rules-based-model)
+ - [Results and observations](https://github.com/richardbatstone/legal_language_compression#Results-and-observations)
+ - [Code and data list](https://github.com/richardbatstone/legal_language_compression#Code-and-data-list)
+
 ## Motivation
 
 The project is motivated by a desire to improve how law is communicated. It starts from the position that people *should* be able to understand the laws that govern their lives and observes that, in general, people struggle to understand law. Lots of thinking has been done on this topic and I happily draw on previous work. For example:
@@ -9,7 +20,7 @@ The project is motivated by a desire to improve how law is communicated. It star
  - [Curtotti and McCreath's work](https://ojs.law.cornell.edu/index.php/joal/article/view/16) examining the relationship between wider access to law (through digitisation) and general understanding of law; and
  - [the work of the Office of the Parliamentary Counsel](https://www.gov.uk/government/publications/when-laws-become-too-complex) into the causes of complexity in legislation.
 
-One of the causes of poor understanding of law (specifically, legislation) that emerges from this work is that the language, style and structure of legislation is not 'user-friendly'. Certainly, the clarity and accessibility of the language used to express our laws has certainly improved in recent decades. But a cursory glance at legislation entering the statute book gives an indication of the level of complexity that remains.
+One of the causes of poor understanding of law (specifically, legislation) that emerges from this work is that the language, style and structure of legislation is not 'user-friendly'. Certainly, the clarity and accessibility of the language used to express our laws has improved in recent decades. But a cursory glance at legislation entering the statute book gives an indication of the level of complexity that remains.
 
 I argue that this complexity arises from a fundamental tension in legislative drafting: legislation has to speak to many different audiences, and those audiences have different needs.
 
@@ -39,11 +50,11 @@ The aim of the compression system is to automatically return the words highlight
 
 I develop a few different models to carry out automatic compression (by deletion) of legal language:
 
- - a rules based system which compresses legal text through a combination of removing particular syntactic sub-trees and phrase matching a set of patterns;
+ - a rules-based system which compresses legal text through a combination of removing particular syntactic sub-trees and phrase matching a set of patterns;
  - a statistical system using LSTMs; and
  - a statistical system based on Transformers.
  
-The rules based model is summarised below. If you are interested in the statistical model setup, go to page 35 of my thesis for full details. In brief, the approach is to treat the problem as a sequence-to-sequence task where the input is the uncompressed text and the output is a sequence of 1s and 0s, indicating whether the corresponding word is to be retained or deleted. The code for these different systems is also included in this repository but, ultimately, I didn't think any of these systems performed compellingly enough to turn them into production versions. Therefore, they are quite rough around the edges.
+The rules-based model is summarised below. If you are interested in the statistical model setup, go to page 35 of my thesis for full details. In brief, the approach is to treat the problem as a sequence-to-sequence task where the input is the uncompressed text and the output is a sequence of 1s and 0s, indicating whether the corresponding word is to be retained or deleted. The code for these different systems is also included in this repository but, ultimately, I didn't think any of these systems performed compellingly enough to turn them into production versions. Therefore, they are quite rough around the edges.
 
 ## Data
 
